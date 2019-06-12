@@ -23,6 +23,8 @@ namespace MiAnGuanUI
         {
             FontManager.instance.addFont(Resources.Load<Font>("MaterialIcons-Regular"), "Material Icons");
             FontManager.instance.addFont(Resources.Load<Font>("GalleryIcons"), "GalleryIcons");
+            FontManager.instance.addFont(Resources.Load<Font>("icomoon"), "MyIcon");
+            
             base.OnEnable();
         }
         protected override Widget createWidget()
@@ -45,8 +47,10 @@ namespace MiAnGuanUI
     
     public class MiAnGuanMainState : State<MiAnGuanMain>
     {
+        static IconData mee = new IconData(0xe971, fontFamily: "MyIcon");
+        static IconData me2 = new IconData(0xe972, fontFamily: "MyIcon");
         List<BottomNavigationBarItem> items = new List<BottomNavigationBarItem> {
-            new BottomNavigationBarItem(activeIcon: new Icon(Icons.cloud),icon: new Icon(Icons.cloud_queue),title:new Text("冒险旅行")),
+            new BottomNavigationBarItem(activeIcon: new Icon(me2),icon: new Icon(mee),title:new Text("冒险旅行")),
             new BottomNavigationBarItem(activeIcon: new Icon(Icons.favorite),icon: new Icon(Icons.favorite_border),title:new Text("排行榜单")),
             new BottomNavigationBarItem(activeIcon: new Icon(Icons.favorite),icon: new Icon(Icons.favorite_border),title:new Text("个人档案"))
         };
@@ -67,14 +71,19 @@ namespace MiAnGuanUI
         {
             return new MaterialApp(
                 home: new Scaffold(
-                body: new Container(color:Colors.yellow),
+                body: new Container( decoration: new BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: new List<BoxShadow> {
+                            new BoxShadow(color:new Color(0x1A000000),blurRadius:1,offset:Offset.zero)
+                        }
+                        )),
                 bottomNavigationBar:new Container(
                     height:84,
                     width:375,
                     decoration:new BoxDecoration(
                         color:Colors.white,
                         boxShadow:new List<BoxShadow> {
-                            new BoxShadow(color:new Color(0x1A000000),blurRadius:1,offset:Offset.zero)
+                            new BoxShadow(color:new Color(0x1A000000),blurRadius:10,offset:Offset.zero)
                         }
                         ),
                     child: new BottomNavigationBar(

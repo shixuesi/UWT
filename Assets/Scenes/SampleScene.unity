@@ -212,7 +212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &534669903
 AudioListener:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 0.07371545, b: 0, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 924902923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9212944390aa4f847bdffb2209a1b6d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 61cdafc6711488941a9d4476ae8236c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -404,7 +404,7 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
-  devicePixelRatioOverride: 0
+  devicePixelRatioOverride: 1.5
   antiAliasingOverride: 4
 --- !u!222 &924902929
 CanvasRenderer:
