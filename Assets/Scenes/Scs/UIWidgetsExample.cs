@@ -146,7 +146,7 @@ namespace UIWidgetsSample
 
         Widget getItem()
         {
-            return new PageIndicator(layout: layout, size: size, activeSize: activeSize, controller: controller, space: 5.0f, count: 4);
+            return new PageIndicator(layout: layout, size: 14, activeSize: activeSize, controller: controller, space: 5.0f, count: 4);
         }
         public override Widget build(BuildContext context)
         {

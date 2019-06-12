@@ -71,12 +71,8 @@ namespace MiAnGuanUI
         {
             return new MaterialApp(
                 home: new Scaffold(
-                body: new Container( decoration: new BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: new List<BoxShadow> {
-                            new BoxShadow(color:new Color(0x1A000000),blurRadius:1,offset:Offset.zero)
-                        }
-                        )),
+               
+                body: new MiAnGuanExplore(),
                 bottomNavigationBar:new Container(
                     height:84,
                     width:375,
